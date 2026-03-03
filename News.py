@@ -56,6 +56,19 @@ def main():
         time.sleep(2)
 
         # 각 시나리오 단계를 run_step으로 감싸서 통계를 냅니다.
+
+        def click_article_by_coord():
+            actions = ActionChains(driver)
+            actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+            actions.w3c_actions.pointer_action.move_to_location(502, 401)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.move_to_location(498, 1591)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+
+        run_step("자동화 스크립트 실행 전 페이지 갱신", click_article_by_coord)
+        time.sleep(2)
+
         run_step("1번째 뉴스 클릭", lambda: driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR, value='new UiSelector().className("android.widget.ImageView").instance(0)').click())
         time.sleep(2)
 
@@ -69,11 +82,9 @@ def main():
         time.sleep(2)        
 
         def click_article_by_coord():
-            driver.execute_script('mobile:pressKey', {"keycode": 3})
-            driver.execute_script('mobile:pressKey', {"keycode": 3})
             actions = ActionChains(driver)
             actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-            actions.w3c_actions.pointer_action.move_to_location(514, 1175)
+            actions.w3c_actions.pointer_action.move_to_location(518, 1175)
             actions.w3c_actions.pointer_action.pointer_down()
             actions.w3c_actions.pointer_action.pause(0.1)
             actions.w3c_actions.pointer_action.release()
@@ -81,6 +92,58 @@ def main():
 
         run_step("PiCK뉴스 > 두번째 인디게이터 이동", click_article_by_coord)
         time.sleep(2)
+
+        def click_article_by_coord():
+            actions = ActionChains(driver)
+            actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+            actions.w3c_actions.pointer_action.move_to_location(541, 1179)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.pause(0.1)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+
+        run_step("PiCK뉴스 > 세번째 인디게이터 이동", click_article_by_coord)
+        time.sleep(2)
+
+
+        def click_article_by_coord():
+            actions = ActionChains(driver)
+            actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+            actions.w3c_actions.pointer_action.move_to_location(564, 1175)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.pause(0.1)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+
+        run_step("PiCK뉴스 > 네번째 인디게이터 이동", click_article_by_coord)
+        time.sleep(2)
+
+
+        def click_article_by_coord():
+            actions = ActionChains(driver)
+            actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+            actions.w3c_actions.pointer_action.move_to_location(584, 1183)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.pause(0.1)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+
+        run_step("PiCK뉴스 > 다섯번째 인디게이터 이동", click_article_by_coord)
+        time.sleep(2)
+
+
+        def click_article_by_coord():
+            actions = ActionChains(driver)
+            actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+            actions.w3c_actions.pointer_action.move_to_location(611, 1179)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.pause(0.1)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+
+        run_step("PiCK뉴스 > 여섯번째 인디게이터 이동", click_article_by_coord)
+        time.sleep(2)
+
 
         def scroll_down():
             actions = ActionChains(driver)
