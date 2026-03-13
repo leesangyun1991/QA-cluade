@@ -264,159 +264,159 @@ def run_scenario(driver):
     time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(29, 72)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(29, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("뒤로가기", click_article_by_coord)
-    # time.sleep(2)
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(190, 477)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.move_to_location(405, 477)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(190, 477)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.move_to_location(405, 477)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("인물상세 > '인물관련 뉴스'카드 > 좌측방향 스와이프(1/2)", click_article_by_coord)
-    # time.sleep(2)
+    run_step("인물상세 > '인물관련 뉴스'카드 > 좌측방향 스와이프(1/2)", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(190, 477)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.move_to_location(405, 477)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(190, 477)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.move_to_location(405, 477)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("인물상세 > '인물관련 뉴스'카드 > 좌측방향 스와이프(2/2)", click_article_by_coord)
-    # time.sleep(2)
+    run_step("인물상세 > '인물관련 뉴스'카드 > 좌측방향 스와이프(2/2)", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(398, 478)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.move_to_location(58, 478)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(398, 478)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.move_to_location(58, 478)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("인물상세 > '인물관련 뉴스'카드 > 우측방향 스와이프(1/2)", click_article_by_coord)
-    # time.sleep(2)
+    run_step("인물상세 > '인물관련 뉴스'카드 > 우측방향 스와이프(1/2)", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(398, 478)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.move_to_location(58, 478)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(398, 478)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.move_to_location(58, 478)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("인물상세 > '인물관련 뉴스'카드 > 우측방향 스와이프(2/2)", click_article_by_coord)
-    # time.sleep(2)
+    run_step("인물상세 > '인물관련 뉴스'카드 > 우측방향 스와이프(2/2)", click_article_by_coord)
+    time.sleep(2)
 
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(211, 476)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(211, 476)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("인물상세 > '인물관련 뉴스'카드 > '중앙'뉴스카드 선택", click_article_by_coord)
-    # time.sleep(2)
+    run_step("인물상세 > '인물관련 뉴스'카드 > '중앙'뉴스카드 선택", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(27, 72)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("뒤로가기", click_article_by_coord)
-    # time.sleep(2)
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(125, 770)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(125, 770)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("$$인물명$$의 지지율은? > [지지해요]활성화", click_article_by_coord)
-    # time.sleep(2)
+    run_step("$$인물명$$의 지지율은? > [지지해요]활성화", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(119, 770)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(119, 770)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("$$인물명$$의 지지율은? > [지지해요]비활성화", click_article_by_coord)
-    # time.sleep(2)
+    run_step("$$인물명$$의 지지율은? > [지지해요]비활성화", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(320, 769)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(320, 769)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("$$인물명$$의 지지율은? > [아쉬워요]활성화", click_article_by_coord)
-    # time.sleep(2)
+    run_step("$$인물명$$의 지지율은? > [아쉬워요]활성화", click_article_by_coord)
+    time.sleep(2)
 
 
-    # def click_article_by_coord():
-    #     actions = ActionChains(driver)
-    #     actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
-    #     actions.w3c_actions.pointer_action.move_to_location(314, 768)
-    #     actions.w3c_actions.pointer_action.pointer_down()
-    #     actions.w3c_actions.pointer_action.pause(0.1)
-    #     actions.w3c_actions.pointer_action.release()
-    #     actions.perform()
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(314, 768)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
 
-    # run_step("$$인물명$$의 지지율은? > [아쉬워요]비활성화", click_article_by_coord)
-    # time.sleep(2)
+    run_step("$$인물명$$의 지지율은? > [아쉬워요]비활성화", click_article_by_coord)
+    time.sleep(2)
 
 
     def swipe_to_bottom():
