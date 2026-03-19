@@ -736,10 +736,1248 @@ def run_scenario(driver):
     time.sleep(2)
 
 
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="공지사항"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("고객지원 > [공지사항 >]", click_by_full_xpath)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (1/3)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (2/3)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (3/3)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(1/3)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(2/3)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(3/3))", swipe_to_top)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(187, 151)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("최신순 > '첫번째'공지사항", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 74)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(194, 225)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("최신순 > '두번째'공지사항", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 71)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(192, 337)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("최신순 > '세번째'공지사항", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(28, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(28, 71)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="문의하기"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("고객지원 > [문의하기 >]", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(39, 97)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("왈라폼 > 웹뷰영역 종료", click_article_by_coord)
+    time.sleep(2)
     
 
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="개인정보 처리방침"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 > [개인정보 처리방침 >]", click_by_full_xpath)
 
 
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 상세 > '시행/변경 일자'Select box 펼침", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(171, 210)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("'시행/변경 일자'Select box 펼침 > 날짜 변경", click_article_by_coord)
+    time.sleep(2)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (1/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (2/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(1/2)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(2/2)", swipe_to_top)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="서비스 이용약관"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 > [서비스 이용약관 >]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 상세 > '시행/변경 일자'Select box 펼침", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(171, 210)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("'시행/변경 일자'Select box 펼침 > 날짜 변경", click_article_by_coord)
+    time.sleep(2)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (1/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (2/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(1/2)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(2/2)", swipe_to_top)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="커뮤니티 운영정책"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 > [커뮤니티 운영정책 >]", click_by_full_xpath)
+
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 상세 > '시행/변경 일자'Select box 펼침", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(171, 210)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("'시행/변경 일자'Select box 펼침 > 날짜 변경", click_article_by_coord)
+    time.sleep(2)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (1/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (2/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(1/2)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(2/2)", swipe_to_top)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="윤리강령 청소년보호정책"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 > [윤리강령 청소년보호정책 >]", click_by_full_xpath)
+
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("약관 및 정책 상세 > '시행/변경 일자'Select box 펼침", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(171, 210)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("'시행/변경 일자'Select box 펼침 > 날짜 변경", click_article_by_coord)
+    time.sleep(2)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (1/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤 (2/2)", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(1/2)", swipe_to_top)
+
+
+    def swipe_to_top():
+        # 'swipe'는 'scroll'보다 동작이 빠르고 가볍습니다.
+        # 아래 방향(down)으로 쓸어내려야 화면이 위(top)로 올라갑니다.
+        driver.execute_script('mobile: swipe', {'direction': 'down'})
+
+    run_step("상단 방향 스크롤(2/2)", swipe_to_top)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(27, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="알림설정"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("앱 설정 > [알림설정 >]", click_by_full_xpath)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(390, 138)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 푸시알림받기 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 136)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 푸시알림받기 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 262)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 추천뉴스 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(390, 261)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 추천뉴스 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 311)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 시세 급변동 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(390, 313)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 시세 급변동 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(387, 361)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 거래소 상폐 관리 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(391, 362)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 거래소 상폐 관리 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 465)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 댓글/답글 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 467)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 댓글/답글 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(385, 569)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 입출금 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 567)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 입출금 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 669)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 마케팅 수신 동의사항 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(391, 669)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 마케팅 수신 동의사항 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(180, 668)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 마케팅 수신 동의사항 > [약관 보기]", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(213, 587)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > '마케팅 수신 동의사항'모달 > [확인]'", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(388, 739)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 야간 수신 동의 Toggle : Off", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(390, 739)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("푸시알림 설정 > 야간 수신 동의 Toggle : On", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_article_by_coord():
+        actions = ActionChains(driver)
+        actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(28, 72)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.pause(0.1)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
+
+
+    run_step("뒤로가기", click_article_by_coord)
+    time.sleep(2)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="언어"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("앱 설정 > (ko)[언어 >]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="English"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [English]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="English"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(ko)언어를 변경하시겠습니까?'모달 > [취소]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="English"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [English]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="언어 변경"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(ko)언어를 변경하시겠습니까?'모달 > [언어 변경]", click_by_full_xpath)
+
+    time.sleep(3)
+
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton[@name="My Page, tab, 5 of 5"]'
+            
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("Nav > (en)[내 정보]", click_by_full_xpath)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="Language"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("앱 설정 > (en)[언어 >]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="日本語"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [日本語]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="Cancel"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(en)언어를 변경하시겠습니까?'모달 > [취소]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="日本語"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [日本語]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="Change Language"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(en)언어를 변경하시겠습니까?'모달 > [언어 변경]", click_by_full_xpath)
+
+    time.sleep(3)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton[@name="マイページ, tab, 5 of 5"]'
+            
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("Nav > (ja)[내 정보]", click_by_full_xpath)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="言語"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("앱 설정 > (ja)[언어 >]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="한국어"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [한국어]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="キャンセル"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(ja)언어를 변경하시겠습니까?'모달 > [취소]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="한국어"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("언어설정 > [한국어]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="言語変更"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("'(ja)언어를 변경하시겠습니까?'모달 > [언어 변경]", click_by_full_xpath)
+
+    time.sleep(3)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeButton[@name="내 정보, tab, 5 of 5"]'
+            
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("Nav > (ko)[내 정보]", click_by_full_xpath)
+
+
+    def swipe_to_bottom():
+        # 'up' 방향은 손가락을 위로 올리는 동작이며, 
+        # 결과적으로 화면(콘텐츠)은 아래쪽(Bottom)으로 내려가게 됩니다.
+        driver.execute_script('mobile: swipe', {'direction': 'up'})
+
+    # 실행 부분 (스텝 이름도 하단 이동으로 변경)
+    run_step("하단 방향 스크롤", swipe_to_bottom)
+    time.sleep(1)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="화면 테마 설정"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("앱 설정 > [화면 테마 설정 >]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="라이트 모드"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("화면 테마 설정 > [라이트 모드]", click_by_full_xpath)
+
+    time.sleep(2)
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="다크 모드"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("화면 테마 설정 > [다크 모드]", click_by_full_xpath)
+
+    time.sleep(2)
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="시스템 설정과 동일"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("화면 테마 설정 > [시스템 설정과 동일]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeApplication[@name="stg-bloomingbit"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("뒤로가기", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeOther[@name="차단 유저 관리"]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("[차단 유저 관리]", click_by_full_xpath)
+
+
+    def click_by_full_xpath():
+        # 제공해주신 긴 XPath 값
+        xpath = '//XCUIElementTypeApplication[@name="stg-bloomingbit"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther[2]'
+        
+        # 10초 대기 후 요소가 발견되면 즉시 클릭
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((AppiumBy.XPATH, xpath))
+        )
+        element.click()
+
+    # 실행 부분
+    run_step("뒤로가기", click_by_full_xpath)
 
 
 def main():
