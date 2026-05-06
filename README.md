@@ -1,2 +1,3 @@
 # QA-cluade
-# QA Process Automation
+# QA process
+# QA harness
