@@ -1,0 +1,56 @@
+# ══════════════════════════════════════════════════════
+#  .gitignore — QA Automation (Playwright + Pytest)
+# ══════════════════════════════════════════════════════
+
+# 🔐 보안 — 절대로 GitHub에 올라가면 안 되는 파일
+**/auth.json
+auth.json
+.env
+.env.local
+.env.*.local
+*.env
+
+# macOS 시스템 파일
+.DS_Store
+**/.DS_Store
+
+# 🐍 파이썬 바이트 컴파일 캐시
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyc
+
+# 파이썬 가상환경
+venv/
+.venv/
+env/
+ENV/
+
+# 🧪 pytest / 테스트 캐시 및 리포트
+.pytest_cache/
+**/.pytest_cache/
+reports/
+allure/
+reports/allure-report/
+reports/pytest.log
+reports/
+
+# 🎭 Playwright 임시 산출물
+playwright-browsers/
+screenshots/
+test-results/
+playwright-report/
+
+# 📦 IDE / 편집기
+.vscode/
+.idea/
+*.swp
+*~
+
+# 기타 빌드 산출물
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+.mypy_cache/
